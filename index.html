@@ -456,6 +456,47 @@
   </div>
 </section>
 
+<section class="section" id="feedback">
+  <div class="container">
+    <h3 class="title is-4">Questions & Feedback</h3>
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <form id="feedbackForm">
+          <div class="field">
+            <label class="label">Email (optional)</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="your.email@example.com">
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Your Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Share your thoughts, questions, or feedback about this blog post..."></textarea>
+            </div>
+          </div>
+          
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">Submit Feedback</button>
+            </div>
+          </div>
+        </form>
+        
+        <p class="help">For paper-related inquiries, please contact the corresponding author or Taiyi Wang directly.</p>
+      </div>
+    </div>
+  </div>
+ </section>
+ 
+ <script>
+  document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Replace with actual feedback submission logic
+    alert('Thank you for your feedback!');
+    this.reset();
+  });
+ </script>
 
 
 <!-- BibTeX or References -->
