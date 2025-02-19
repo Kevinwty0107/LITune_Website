@@ -90,6 +90,7 @@
 <section class="section is-light" style="padding-top: 1rem; padding-bottom: 1rem;">
   <div class="container has-text-centered">
     <h4 class="subtitle is-5">Demo Video of LITune Tuning Process</h4>
+    <div class="content has-text-justified">
     <video controls muted width="80%">
       <source src="static/videos/demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -180,14 +181,84 @@
     </div>
 
     <!-- Figure 2 (obs2) -->
-    <figure class="image" style="margin-top: 20px;">
-      <img src="static/images/ob2.png" alt="Figure 2: Parameter value distributions and impact scores.">
+    <figure class="image zoomable-figure" style="margin-top: 20px;">
+      <img src="static/images/ob2.png" alt="Figure 2: Parameter value distributions and impact scores." class="zoomable-image">
       <figcaption style="margin-top: 10px; text-align:left;">
         <strong>Figure 2.</strong> Selected parameter value distributions and their impact scores
         across different workloads when tuning on ALEX. Heatmap colors represent normalized optimal
         parameter values, while percentages indicate each parameter's individual tuning impact.
       </figcaption>
+      <div class="zoom-instructions">Click to zoom in, press Esc to reset</div>
     </figure>
+
+    <style>
+      .zoomable-figure {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .zoomable-image {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+      }
+      
+      .zoomed {
+        cursor: zoom-out;
+        transform: scale(2);
+        transform-origin: var(--x) var(--y);
+      }
+      
+      .zoom-instructions {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        
+        zoomableImages.forEach(img => {
+          img.addEventListener('click', function(e) {
+            if (this.classList.contains('zoomed')) {
+              // Zoom out
+              this.classList.remove('zoomed');
+              this.style.removeProperty('--x');
+              this.style.removeProperty('--y');
+            } else {
+              // Zoom in at click position
+              const rect = this.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100 + '%';
+              const y = ((e.clientY - rect.top) / rect.height) * 100 + '%';
+              
+              this.style.setProperty('--x', x);
+              this.style.setProperty('--y', y);
+              this.classList.add('zoomed');
+            }
+          });
+        });
+        
+        // Reset zoom on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const zoomedImages = document.querySelectorAll('.zoomed');
+            zoomedImages.forEach(img => {
+              img.classList.remove('zoomed');
+              img.style.removeProperty('--x');
+              img.style.removeProperty('--y');
+            });
+          }
+        });
+      });
+    </script>
 
     <div class="content has-text-justified" style="margin-top: 20px;">
       <p>
@@ -360,6 +431,29 @@
     </figure>
   </div>
 </section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Conclusion</h2>
+    <div class="content has-text-justified">
+      <p>
+        <strong>LITune</strong> works effectively across various learned indexes, with impact varying based on parameter complexity and interactions. 
+        By approaching tuning as a black-box optimization problem, it identifies optimal configurations before analyzing them. 
+        While some redundant parameters are tolerable, maintaining manageable dimensionality is crucial. 
+        Currently relying on domain expertise for parameter selection, future work could automate this process. 
+        Techniques like checkpointing and configuration caching help reduce retraining costs as workloads change.
+        <br>
+        Despite its promise, <strong>LITune</strong> occasionally experiences convergence and stability challenges during training, 
+        indicating areas for further research to enhance reliability. Accelerating offline training through methods 
+        like parallelization could improve deployment efficiency. Overall, <strong>LITune</strong> 's innovative combination of Meta-RL 
+        and context-aware strategies establishes a new benchmark for improving system efficiency and query performance 
+        while maintaining stability through proactive risk management.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- BibTeX or References -->
