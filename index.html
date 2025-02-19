@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="LITune: A New Paradigm in Tuning Learned Indexes with Reinforcement Learning.">
-  <meta property="og:title" content="LITune: A New Paradigm in Tuning Learned Indexes"/>
+  <meta property="og:title" content="LITune: A New Paradigm in Tuning Learned Indexes with Reinforcement Learning"/>
   <meta property="og:description" content="Learn about LITune, a reinforcement learning enhanced approach for tuning learned indexes."/>
   <meta property="og:url" content="https://RL4Sys.github.io/LITune"/>
   <!-- <meta property="og:image" content="static/images/litune_banner.png" /> -->
-  <meta name="twitter:title" content="LITune: A New Paradigm in Tuning Learned Indexes">
+  <meta name="twitter:title" content="LITune-A New Paradigm in Tuning Learned Indexes: A Reinforcement Learning Enhanced Approach">
   <meta name="twitter:description" content="Discover LITune, a safe and adaptive RL-based system for tuning learned indexes.">
   <!-- <meta name="twitter:image" content="static/images/litune_twitter_banner.png"> -->
   <meta name="twitter:card" content="summary_large_image">
@@ -50,31 +50,33 @@
 <body>
 
 <!-- New Hero Section: Title, Authors, and Buttons -->
-<section class="hero is-light is-fullheight">
+<section class="hero is-light" style="padding-top: 2rem; padding-bottom: 2rem;">
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title is-2">
-        LITune: A Reinforcement Learning Enhanced<br>
-        Approach for Tuning Learned Indexes
+        LITune: A New Paradigm in Tuning Learned Indexes: <br>
+        A Reinforcement Learning Enhanced Approach
       </h1>
       <p class="subtitle is-5 subtitle-authors">
         Taiyi Wang<sup>1</sup>, Liang Liang<sup>2</sup>, Guang Yang<sup>3</sup>, Thomas Heinis<sup>3</sup>,<br>
         and Eiko Yoneki<sup>1*</sup><br>
         <span style="font-size: 0.9em;">
-          1 University of Cambridge, 2 EPFL, 3 Imperial College London<br>
+          <sup>1</sup> University of Cambridge <br>
+          <sup>2</sup> EPFL <br>
+          <sup>3</sup> Imperial College London<br>
           <em>* Corresponding author: eiko.yoneki@cl.cam.ac.uk</em>
         </span>
       </p>
       <div class="buttons is-centered">
-        <a href="static/pdfs/LITune_paper.pdf" class="button is-primary is-rounded" target="_blank">
+        <a href="static/pdfs/LITune_Paper.pdf" class="button is-primary is-rounded" target="_blank">
           <span class="icon"><i class="fas fa-file-pdf"></i></span>
           <span>Paper</span>
         </a>
-        <a href="https://github.com/RL4Sys/LITune" class="button is-link is-rounded" target="_blank">
+        <a href="https://github.com/SubAnony/LITune_SIGMOD_25/" class="button is-link is-rounded" target="_blank">
           <span class="icon"><i class="fab fa-github"></i></span>
           <span>Code</span>
         </a>
-        <a href="https://arxiv.org/abs/XXXX.XXXXX" class="button is-dark is-rounded" target="_blank">
+        <a href="https://www.arxiv.org/abs/2502.05001" class="button is-dark is-rounded" target="_blank">
           <span class="icon"><i class="ai ai-arxiv"></i></span>
           <span>arXiv</span>
         </a>
@@ -86,9 +88,8 @@
 
 
 
-
 <!-- SECTION 1: Observation and Summary -->
-<section class="section hero is-light">
+<section class="section is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3">1. Observation and Summary of Our Work</h2>
 
@@ -97,7 +98,7 @@
         The intersection of data management and machine learning has given rise to learned index
         structures. These indexes integrate machine learning, replacing traditional algorithmic
         components, to capture data distributions and optimize search times. Notable examples include
-        RMI [kraska2018case], ALEX [ding2020alex], and PGM [ferragina2020pgm], which have become
+        RMI [1], ALEX [2], and PGM [3], which have become
         subjects of extensive research.
       </p>
       <p>
@@ -105,7 +106,7 @@
         performance for varying workloads. For instance, ALEX favors combined search and update
         performance by introducing gaps at the expense of space efficiency [ding2020alex]. On the
         other hand, the dynamic PGM Index prioritizes update efficiency over search performance
-        [ferragina2020pgm]. These design trade-offs lead to more complex structures with configurable
+        [3]. These design trade-offs lead to more complex structures with configurable
         parameters. Tuning these parameters is the key to balancing trade-offs that ensure higher
         performance over traditional indexes.
       </p>
@@ -120,7 +121,7 @@
 
     <!-- Figure 1 (obs1) -->
     <figure class="image" style="margin-top: 20px;">
-      <img src="static/images/obs1.png" alt="Figure 1: Combined performance surfaces and speedups.">
+      <img src="static/images/ob1.png" alt="Figure 1: Combined performance surfaces and speedups.">
       <figcaption style="margin-top: 10px; text-align:center;">
         <strong>Figure 1.</strong> (a) shows the performance surface of a learned index (ALEX)
         under wild exploration of the parameter space. (b) highlights the optimal performance
@@ -146,7 +147,7 @@
 
     <!-- Figure 2 (obs2) -->
     <figure class="image" style="margin-top: 20px;">
-      <img src="static/images/obs2.png" alt="Figure 2: Parameter value distributions and impact scores.">
+      <img src="static/images/ob2.png" alt="Figure 2: Parameter value distributions and impact scores.">
       <figcaption style="margin-top: 10px; text-align:center;">
         <strong>Figure 2.</strong> Selected parameter value distributions and their impact scores
         across different workloads when tuning on ALEX. Heatmap colors represent normalized optimal
@@ -252,7 +253,7 @@
     </figure>
 
     <figure class="image" style="margin-top: 20px;">
-      <img src="static/images/per_table.png" alt="Performance Table">
+      <img src="static/images/perf_table.png" alt="Performance Table">
       <figcaption style="margin-top: 10px; text-align:center;">
         <strong>Figure:</strong> Detailed comparison table of average throughput and latency.
       </figcaption>
@@ -292,24 +293,24 @@
   </div>
 </section>
 
-<!-- Poster (optional) -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Project Poster</h2>
-      <iframe src="static/pdfs/litune_poster.pdf" width="100%" height="550">
-      </iframe>
-    </div>
-  </div>
-</section>
 
 <!-- BibTeX or References -->
 <section class="section" id="references">
   <div class="container is-max-desktop content">
     <h2 class="title">References</h2>
     <p>
-      [kraska2018case] Kraska et al. “The Case for Learned Index Structures.” SIGMOD, 2018.<br>
-      [ding2020alex] Ding et al. “ALEX: An Updatable Adaptive Learned Index.” SIGMOD, 2020.<br>
-      [ferragina2020pgm] Ferragina and Vinciguerra. “PGM-Index: Learning-Compliant Hash Indexes.” 2020.<br>
-      [kipf2019sosd] Kipf et al. “SOSD: A Benchmark for Learned Indexes.” 2019.<br>
-      [schulman2017proximal
+      [1] Kraska et al. “The Case for Learned Index Structures.” SIGMOD, 2018.<br>
+      [2] Ding et al. “ALEX: An Updatable Adaptive Learned Index.” SIGMOD, 2020.<br>
+      [3] Ferragina and Vinciguerra. “PGM-Index: Learning-Compliant Hash Indexes.” 2020.<br>
+    </p>
+
+    <pre><code>@article{wang2025new,
+  title={A New Paradigm in Tuning Learned Indexes: A Reinforcement Learning Enhanced Approach},
+  author={Wang, Taiyi and Liang, Liang and Yang, Guang and Heinis, Thomas and Yoneki, Eiko},
+  journal={arXiv preprint arXiv:2502.05001},
+  year={2025}
+}
+</code></pre>
+  </div>
+</section>
+
