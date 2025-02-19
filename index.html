@@ -54,8 +54,8 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title is-2">
-        LITune: A New Paradigm in Tuning Learned Indexes: <br>
-        A Reinforcement Learning Enhanced Approach
+        LITune: A New Paradigm in Tuning Learned Indexes <br>
+        -A Reinforcement Learning Enhanced Approach
       </h1>
       <p class="subtitle is-5 subtitle-authors">
         Taiyi Wang<sup>1</sup>, Liang Liang<sup>2</sup>, Guang Yang<sup>3</sup>, Thomas Heinis<sup>3</sup>,<br>
@@ -138,7 +138,7 @@
       <p>
         The effective design of a learned index involves deliberate trade-offs to achieve optimal
         performance for varying workloads. For instance, ALEX favors combined search and update
-        performance by introducing gaps at the expense of space efficiency [ding2020alex]. On the
+        performance by introducing gaps at the expense of space efficiency [2]. On the
         other hand, the dynamic PGM Index prioritizes update efficiency over search performance
         [3]. These design trade-offs lead to more complex structures with configurable
         parameters. Tuning these parameters is the key to balancing trade-offs that ensure higher
@@ -156,7 +156,7 @@
     <!-- Figure 1 (obs1) -->
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/ob1.png" alt="Figure 1: Combined performance surfaces and speedups.">
-      <figcaption style="margin-top: 10px; text-align:center;">
+      <figcaption style="margin-top: 10px; text-align:left;">
         <strong>Figure 1.</strong> (a) shows the performance surface of a learned index (ALEX)
         under wild exploration of the parameter space. (b) highlights the optimal performance
         speedup achieved by LITune compared to default expert-selected parameters. (c) illustrates
@@ -182,7 +182,7 @@
     <!-- Figure 2 (obs2) -->
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/ob2.png" alt="Figure 2: Parameter value distributions and impact scores.">
-      <figcaption style="margin-top: 10px; text-align:center;">
+      <figcaption style="margin-top: 10px; text-align:left;">
         <strong>Figure 2.</strong> Selected parameter value distributions and their impact scores
         across different workloads when tuning on ALEX. Heatmap colors represent normalized optimal
         parameter values, while percentages indicate each parameter's individual tuning impact.
@@ -218,7 +218,6 @@
     <h2 class="title is-3">2. <span style="text-transform:none;">LITune</span> System</h2>
     <br>
 
-    <h3 class="subtitle is-4">2.1 Motivation</h3>
     <div class="content has-text-justified">
       <p>
         Unlike existing index tuning works that concentrate on a limited set of observable parameters,
@@ -236,11 +235,7 @@
         using deep reinforcement learning (DRL), mitigating the instabilities and aimless explorations
         of generic tuning methods.
       </p>
-    </div>
-    <br>
 
-    <h3 class="subtitle is-4">2.2 System Overview</h3>
-    <div class="content has-text-justified">
       <p>
         At the core of <strong>LITune</strong> is a reinforcement learning approach designed to adapt
         to dynamic workloads beyond traditional cost models. We design a Markov Decision Process
@@ -257,7 +252,7 @@
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/LITune_Sys.png" alt="LITune System Overview">
       <figcaption style="margin-top: 10px; text-align:center;">
-        <strong>Figure:</strong> <em>LITune</em> system diagram illustrating the RL-based
+        <strong>Figure 3.</strong> <em>LITune</em> system diagram illustrating the RL-based
         training and online tuning pipeline.
       </figcaption>
     </figure>
@@ -286,7 +281,7 @@
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/perf_chart.png" alt="Performance Chart">
       <figcaption style="margin-top: 10px; text-align:center;">
-        <strong>Figure:</strong> LITune end-to-end runtime performance across multiple workloads.
+        <strong>Figure 4.</strong> LITune end-to-end runtime performance across multiple workloads.
       </figcaption>
     </figure>
 
@@ -317,8 +312,8 @@
     <!-- Safe RL figure -->
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/safety.png" alt="Safe and Stable Tuning Figure">
-      <figcaption style="margin-top: 10px; text-align:center;">
-        <strong>Figure:</strong> (a) Training stability comparison with/without Safe-RL.
+      <figcaption style="margin-top: 10px; text-align:left;">
+        <strong>Figure 5.</strong> (a) Training stability comparison with/without Safe-RL.
         (b) End-to-end runtime performance after tuning on the MIX dataset.
       </figcaption>
     </figure>
