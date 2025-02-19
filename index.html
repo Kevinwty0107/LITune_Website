@@ -456,24 +456,27 @@
   </div>
 </section>
 
-
 <section class="section" id="feedback">
   <div class="container">
     <h3 class="title is-4" style="margin-left: 16.67%;">Questions & Feedback</h3>
     <div class="columns">
       <div class="column is-8 is-offset-2">
-        <form id="feedbackForm">
+        <form id="feedbackForm" action="https://formsubmit.co/tw557@cam.ac.uk method="POST">
+          <!-- Replace YOUR_EMAIL_HERE with your actual email -->
+          <input type="hidden" name="_subject" value="LITune Blog Feedback">
+          <input type="hidden" name="_captcha" value="false">
+          
           <div class="field">
             <label class="label">Email (optional)</label>
             <div class="control">
-              <input class="input" type="email" placeholder="your.email@example.com">
+              <input class="input" type="email" name="email" placeholder="your.email@example.com">
             </div>
           </div>
           
           <div class="field">
             <label class="label">Your Message</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Share your thoughts, questions, or feedback about this blog post..."></textarea>
+              <textarea class="textarea" name="message" placeholder="Share your thoughts, questions, or feedback about this blog post..." required></textarea>
             </div>
           </div>
           
@@ -492,16 +495,17 @@
       </div>
     </div>
   </div>
- </section>
- 
- <script>
+</section>
+
+<script>
   document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Hide form and show response message
-    this.style.display = 'none';
-    document.getElementById('feedbackResponse').classList.remove('is-hidden');
+    // Show response after form submission
+    setTimeout(function() {
+      document.getElementById('feedbackForm').style.display = 'none';
+      document.getElementById('feedbackResponse').classList.remove('is-hidden');
+    }, 1000);
   });
- </script>
+</script>
 
 
 <!-- BibTeX or References -->
