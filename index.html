@@ -456,9 +456,10 @@
   </div>
 </section>
 
+
 <section class="section" id="feedback">
   <div class="container">
-    <h3 class="title is-4">Questions & Feedback</h3>
+    <h3 class="title is-4" style="margin-left: 16.67%;">Questions & Feedback</h3>
     <div class="columns">
       <div class="column is-8 is-offset-2">
         <form id="feedbackForm">
@@ -483,7 +484,11 @@
           </div>
         </form>
         
-        <p class="help">For paper-related inquiries, please contact the corresponding author or Taiyi Wang directly.</p>
+        <div id="feedbackResponse" class="notification is-success is-hidden">
+          Thank you for your feedback! We appreciate your input.
+        </div>
+        
+        <p class="help">For paper-related inquiries, please contact the corresponding author directly.</p>
       </div>
     </div>
   </div>
@@ -492,9 +497,9 @@
  <script>
   document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    // Replace with actual feedback submission logic
-    alert('Thank you for your feedback!');
-    this.reset();
+    // Hide form and show response message
+    this.style.display = 'none';
+    document.getElementById('feedbackResponse').classList.remove('is-hidden');
   });
  </script>
 
