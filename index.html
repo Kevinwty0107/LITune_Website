@@ -202,6 +202,19 @@
       </p>
     </div>
 
+
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p>
+        Besides, our empirical experiments demonstrate that parameter interactions in learned indexes exhibit complex, 
+        workload-dependent relationships with no dominant parameters. As shown in Figure 2, 
+        where colors represent normalized parameter values and percentages show impact scores (ratio of individual-parameter to full-parameter tuning improvements), 
+        no parameter consistently exerts greater influence, with all impact scores falling between 10-25%. 
+        This heterogeneous distribution of parameter values across workloads, coupled with the balanced impact scores, 
+        indicates that performance optimization requires holistic parameter tuning rather than focusing on individual parameters.
+      </p>
+    </div>
+
+
     <div class="content has-text-justified" style="margin-top: 20px;">
       <p>
         [1] Kraska et al. “The Case for Learned Index Structures.” SIGMOD, 2018.<br>
@@ -268,12 +281,14 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">3. Key Features and Experimental Results</h2>
     <br>
-    <h3 class="subtitle is-4">3.1 LITune is Highly Effective</h3>
+    <h3 class="subtitle is-4">3.1 LITune is Highly Effective and adaptable to various workloads</h3>
     <div class="content has-text-justified">
       <p>
         We showcase <strong>LITune</strong>'s end-to-end performance on various workloads. The
         following charts highlight its effectiveness compared to default and other baseline tuning
-        methods.
+        methods. <strong>LITune</strong> demonstrates strong End-to-End (E2E) performance across diverse datasets and workloads, leveraging Meta-RL, 
+        the ET-MDP solver, and O2 System components. Figure 4 highlights CARMI's 
+        notable optimization headroom, with over 90% runtime reduction (compared to 30-40% for ALEX). Complex datasets like MIX and OSM pose additional challenges, yet <strong>LITune</strong> consistently excels.
       </p>
     </div>
 
@@ -301,8 +316,19 @@
         when parameters significantly impact system reliability. <strong>LITune</strong> addresses
         this with a Safe-RL module, ensuring stable exploration and preventing catastrophic failures.
       </p>
+
       <p>
-        The figure below compares training stability for <em>LITune</em> with and without Safe-RL.
+        Figure 5 illustrates the benefits of our safety-aware design. 
+        Figures 5.(a)--(e) show how four methods explore two critical parameters: 
+        <strong>kMaxOutOfDomainKeys</strong> and <strong>kOutOfDomainToleranceFactor</strong>, which are crucial under specific configurations 
+        (<strong>fanoutSelectionMethod = 1, =splittingPolicyMethod = 1, allowSplittingUpwards = True</strong>). 
+        The red-highlighted \textbf{Dangerous Zone} in subfigure (a) marks parameter regions prone to causing system instabilities and degraded performance, 
+        emphasizing the need for a tuner like \textsc{LITune}. subfigure (f) presents the cumulative number of index system failures (e.g., infinite loops, memory issues) 
+        during tuning over five trials, highlighting the effectiveness of our safety design.
+      </p>
+
+      <p>
+        Figure 6 below compares training stability for <em>LITune</em> with and without Safe-RL.
         Without Safe-RL, reward signals exhibit high volatility due to system terminations from
         aggressive parameter exploration. In contrast, <em>LITune</em> with Safe-RL maintains stable
         improvement and achieves better final performance with fewer failures.
@@ -311,9 +337,16 @@
 
     <!-- Safe RL figure -->
     <figure class="image" style="margin-top: 20px;">
-      <img src="static/images/safety.png" alt="Safe and Stable Tuning Figure">
+      <img src="static/images/safety_1.png" alt="Safe and Stable Tuning Figure">
       <figcaption style="margin-top: 10px; text-align:left;">
-        <strong>Figure 5.</strong> (a) Training stability comparison with/without Safe-RL.
+        <strong>Figure 5.</strong> Exploring Parameter Spaces Across Tuning Methods
+      </figcaption>
+    </figure>
+
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/safety_2.png" alt="Safe and Stable Tuning Figure">
+      <figcaption style="margin-top: 10px; text-align:left;">
+        <strong>Figure 6.</strong> (a) Training stability comparison with/without Safe-RL.
         (b) End-to-end runtime performance after tuning on the MIX dataset.
       </figcaption>
     </figure>
