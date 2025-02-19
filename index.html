@@ -2,39 +2,29 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="description" content="LITune: A New Paradigm in Tuning Learned Indexes with Reinforcement Learning.">
+  <meta property="og:title" content="LITune: A New Paradigm in Tuning Learned Indexes"/>
+  <meta property="og:description" content="Learn about LITune, a reinforcement learning enhanced approach for tuning learned indexes."/>
+  <meta property="og:url" content="https://RL4Sys.github.io/LITune"/>
+  <!-- <meta property="og:image" content="static/images/litune_banner.png" /> -->
+  <meta name="twitter:title" content="LITune: A New Paradigm in Tuning Learned Indexes">
+  <meta name="twitter:description" content="Discover LITune, a safe and adaptive RL-based system for tuning learned indexes.">
+  <!-- <meta name="twitter:image" content="static/images/litune_twitter_banner.png"> -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="LITune, learned indexes, reinforcement learning, indexing, database systems">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Academic Project Page</title>
+  <title>LITune: A New Paradigm in Tuning Learned Indexes</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+        rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -43,270 +33,283 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- (Optional) Additional styling for the new hero -->
+  <style>
+    .hero-body {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    .subtitle-authors {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
 
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
+<!-- New Hero Section: Title, Authors, and Buttons -->
+<section class="hero is-light is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-2">
+        LITune: A Reinforcement Learning Enhanced<br>
+        Approach for Tuning Learned Indexes
+      </h1>
+      <p class="subtitle is-5 subtitle-authors">
+        Taiyi Wang<sup>1</sup>, Liang Liang<sup>2</sup>, Guang Yang<sup>3</sup>, Thomas Heinis<sup>3</sup>,<br>
+        and Eiko Yoneki<sup>1*</sup><br>
+        <span style="font-size: 0.9em;">
+          1 University of Cambridge, 2 EPFL, 3 Imperial College London<br>
+          <em>* Corresponding author: eiko.yoneki@cl.cam.ac.uk</em>
+        </span>
+      </p>
+      <div class="buttons is-centered">
+        <a href="static/pdfs/LITune_paper.pdf" class="button is-primary is-rounded" target="_blank">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span>
+          <span>Paper</span>
+        </a>
+        <a href="https://github.com/RL4Sys/LITune" class="button is-link is-rounded" target="_blank">
+          <span class="icon"><i class="fab fa-github"></i></span>
+          <span>Code</span>
+        </a>
+        <a href="https://arxiv.org/abs/XXXX.XXXXX" class="button is-dark is-rounded" target="_blank">
+          <span class="icon"><i class="ai ai-arxiv"></i></span>
+          <span>arXiv</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
+<!-- End Hero Section -->
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
 
-<!-- Paper abstract -->
+
+<!-- SECTION 1: Observation and Summary -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
+    <h2 class="title is-3">1. Observation and Summary of Our Work</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        The intersection of data management and machine learning has given rise to learned index
+        structures. These indexes integrate machine learning, replacing traditional algorithmic
+        components, to capture data distributions and optimize search times. Notable examples include
+        RMI [kraska2018case], ALEX [ding2020alex], and PGM [ferragina2020pgm], which have become
+        subjects of extensive research.
+      </p>
+      <p>
+        The effective design of a learned index involves deliberate trade-offs to achieve optimal
+        performance for varying workloads. For instance, ALEX favors combined search and update
+        performance by introducing gaps at the expense of space efficiency [ding2020alex]. On the
+        other hand, the dynamic PGM Index prioritizes update efficiency over search performance
+        [ferragina2020pgm]. These design trade-offs lead to more complex structures with configurable
+        parameters. Tuning these parameters is the key to balancing trade-offs that ensure higher
+        performance over traditional indexes.
+      </p>
+      <p>
+        Beyond the primary parameters, learned indexes like ALEX have more subtle tunable factors
+        that are often overlooked for simplicity. These parameters affect various aspects of the
+        index performance, from operation cost to the structure of the index. Adjusting them in
+        real-world scenarios can lead to substantial performance improvements, though it requires
+        a more complex tuning process.
+      </p>
+    </div>
+
+    <!-- Figure 1 (obs1) -->
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/obs1.png" alt="Figure 1: Combined performance surfaces and speedups.">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure 1.</strong> (a) shows the performance surface of a learned index (ALEX)
+        under wild exploration of the parameter space. (b) highlights the optimal performance
+        speedup achieved by LITune compared to default expert-selected parameters. (c) illustrates
+        the continuous tuning performance of our system alongside other out-of-the-box methods under
+        default configurations. (d) compares the tuning stability and costs across methods to reach
+        their respective optimal performance levels.
+      </figcaption>
+    </figure>
+
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p>
+        Selecting the right tuning approach for learned indexes involves navigating a myriad of
+        parameter configurations. In practice, parameterized indexes can exhibit vastly different
+        performance due to parameter choices (see Figure 1(a)). This variability underscores the
+        complexities and potential performance swings when considering the full spectrum of
+        high-dimensional and continuous parameter configurations. Moreover, unlike algorithmic
+        indexes such as B+trees that perform well out of the box, learned indexes are
+        distribution-dependent and typically lack automatic tuning resources. Thus, a high-quality
+        tuner is necessary to identify optimal solutions within a limited budget.
+      </p>
+    </div>
+
+    <!-- Figure 2 (obs2) -->
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/obs2.png" alt="Figure 2: Parameter value distributions and impact scores.">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure 2.</strong> Selected parameter value distributions and their impact scores
+        across different workloads when tuning on ALEX. Heatmap colors represent normalized optimal
+        parameter values, while percentages indicate each parameter's individual tuning impact.
+      </figcaption>
+    </figure>
+
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p>
+        By fine-tuning these parameters, we can achieve significant performance improvements.
+        Figure 1(b) emphasizes the substantial performance gains (measured by query runtime speedup)
+        achieved by our tuning system over the SOSD dataset. Moreover, real-world usage often involves
+        dynamic workloads, as illustrated in Figure 1(c), underscoring the need for adaptive tuning.
+        Another challenge is safe tuning. Aggressive parameter exploration can lead to system
+        instability, as shown in Figure 1(d). These observations highlight the necessity of a
+        tailor-made tuning system like <strong>LITune</strong> rather than relying on out-of-box
+        methods.
+      </p>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
+<!-- SECTION 2: LITune System -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">2. <span style="text-transform:none;">LITune</span> System</h2>
 
-<!-- Image carousel -->
+    <h3 class="subtitle is-4">2.1 Motivation</h3>
+    <div class="content has-text-justified">
+      <p>
+        Unlike existing index tuning works that concentrate on a limited set of observable parameters,
+        our work tackles the more complex challenge of tuning within a vast parameter space where
+        parameters interact in non-independent ways. This complexity demands stable and efficient
+        tuning strategies, especially in online and continuous learning contexts. Since parameter
+        metrics are difficult to capture and do not readily lend themselves to strong heuristics, we
+        focus on capturing stateful transitions and propose tailored end-to-end tuners.
+      </p>
+      <p>
+        Navigating complex parameter spaces poses significant challenges for traditional search
+        strategies and advanced model-based approaches. Traditional methods (random search, grid
+        search) fall short in large parameter spaces, while out-of-box frameworks (e.g., SMBO) become
+        expensive when workloads shift. <strong>LITune</strong> offers online, stateful index tuning
+        using deep reinforcement learning (DRL), mitigating the instabilities and aimless explorations
+        of generic tuning methods.
+      </p>
+    </div>
+
+    <h3 class="subtitle is-4">2.2 System Overview</h3>
+    <div class="content has-text-justified">
+      <p>
+        At the core of <strong>LITune</strong> is a reinforcement learning approach designed to adapt
+        to dynamic workloads beyond traditional cost models. We design a Markov Decision Process
+        (MDP) framework, with the RL agent interacting with the environment to maximize rewards
+        (system performance). <strong>LITune</strong> operates in two main phases:
+        <em>Training Stage</em> and <em>Online Tuning Stage</em>. In the Training Stage, we generate
+        a pre-trained model that can be deployed and continuously fine-tuned during the Online Tuning
+        Stage. A context-aware RL system is used to prevent early terminations and ensure stable,
+        high-performance configurations.
+      </p>
+    </div>
+
+    <!-- LITune System Diagram -->
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/LITune_Sys.png" alt="LITune System Overview">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure:</strong> <em>LITune</em> system diagram illustrating the RL-based
+        training and online tuning pipeline.
+      </figcaption>
+    </figure>
+
+    <!-- Demo video (if you want an inline demo) -->
+    <div style="margin-top: 20px; text-align:center;">
+      <h4 class="subtitle is-5">Demo Video</h4>
+      <video controls muted width="80%">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 3: Key Features and Experimental Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">3. Key Features and Experimental Results</h2>
+
+    <h3 class="subtitle is-4">3.1 LITune is Highly Effective</h3>
+    <div class="content has-text-justified">
+      <p>
+        We showcase <strong>LITune</strong>’s end-to-end performance on various workloads. The
+        following charts highlight its effectiveness compared to default and other baseline tuning
+        methods.
+      </p>
+    </div>
+
+    <!-- Example performance charts -->
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/perf_chart.png" alt="Performance Chart">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure:</strong> LITune end-to-end runtime performance across multiple workloads.
+      </figcaption>
+    </figure>
+
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/per_table.png" alt="Performance Table">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure:</strong> Detailed comparison table of average throughput and latency.
+      </figcaption>
+    </figure>
+
+    <h3 class="subtitle is-4">3.2 Safe and Stable Tuning</h3>
+    <div class="content has-text-justified">
+      <p>
+        Exploring parameter spaces can enhance system performance but also introduces risks, especially
+        when parameters significantly impact system reliability. <strong>LITune</strong> addresses
+        this with a Safe-RL module, ensuring stable exploration and preventing catastrophic failures.
+      </p>
+      <p>
+        The figure below compares training stability for <em>LITune</em> with and without Safe-RL.
+        Without Safe-RL, reward signals exhibit high volatility due to system terminations from
+        aggressive parameter exploration. In contrast, <em>LITune</em> with Safe-RL maintains stable
+        improvement and achieves better final performance with fewer failures.
+      </p>
+    </div>
+
+    <!-- Safe RL figure -->
+    <figure class="image" style="margin-top: 20px;">
+      <img src="static/images/safety.png" alt="Safe and Stable Tuning Figure">
+      <figcaption style="margin-top: 10px; text-align:center;">
+        <strong>Figure:</strong> (a) Training stability comparison with/without Safe-RL.
+        (b) End-to-end runtime performance after tuning on the MIX dataset.
+      </figcaption>
+    </figure>
+
+    <div class="content has-text-justified" style="margin-top: 20px;">
+      <p>
+        This stability also translates to better end-to-end performance. On average, <strong>LITune</strong>
+        with Safe-RL achieves significantly lower runtime with much less variance, demonstrating that
+        safer exploration leads to both better and more reliable tuning outcomes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Poster (optional) -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+      <h2 class="title is-3">Project Poster</h2>
+      <iframe src="static/pdfs/litune_poster.pdf" width="100%" height="550">
+      </iframe>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+<!-- BibTeX or References -->
+<section class="section" id="references">
+  <div class="container is-max-desktop content">
+    <h2 class="title">References</h2>
+    <p>
+      [kraska2018case] Kraska et al. “The Case for Learned Index Structures.” SIGMOD, 2018.<br>
+      [ding2020alex] Ding et al. “ALEX: An Updatable Adaptive Learned Index.” SIGMOD, 2020.<br>
+      [ferragina2020pgm] Ferragina and Vinciguerra. “PGM-Index: Learning-Compliant Hash Indexes.” 2020.<br>
+      [kipf2019sosd] Kipf et al. “SOSD: A Benchmark for Learned Indexes.” 2019.<br>
+      [schulman2017proximal
