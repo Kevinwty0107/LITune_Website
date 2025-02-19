@@ -168,6 +168,75 @@
       </figcaption>
     </figure>
 
+    <style>
+      .zoomable-figure {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .zoomable-image {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+      }
+      
+      .zoomed {
+        cursor: zoom-out;
+        transform: scale(2);
+        transform-origin: var(--x) var(--y);
+      }
+      
+      .zoom-instructions {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        
+        zoomableImages.forEach(img => {
+          img.addEventListener('click', function(e) {
+            if (this.classList.contains('zoomed')) {
+              // Zoom out
+              this.classList.remove('zoomed');
+              this.style.removeProperty('--x');
+              this.style.removeProperty('--y');
+            } else {
+              // Zoom in at click position
+              const rect = this.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100 + '%';
+              const y = ((e.clientY - rect.top) / rect.height) * 100 + '%';
+              
+              this.style.setProperty('--x', x);
+              this.style.setProperty('--y', y);
+              this.classList.add('zoomed');
+            }
+          });
+        });
+        
+        // Reset zoom on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const zoomedImages = document.querySelectorAll('.zoomed');
+            zoomedImages.forEach(img => {
+              img.classList.remove('zoomed');
+              img.style.removeProperty('--x');
+              img.style.removeProperty('--y');
+            });
+          }
+        });
+      });
+    </script>
+
     <div class="content has-text-justified" style="margin-top: 20px;">
       <p>
         Selecting the right tuning approach for learned indexes involves navigating a myriad of
@@ -341,6 +410,75 @@
       </figcaption>
     </figure>
 
+    <style>
+      .zoomable-figure {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .zoomable-image {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+      }
+      
+      .zoomed {
+        cursor: zoom-out;
+        transform: scale(2);
+        transform-origin: var(--x) var(--y);
+      }
+      
+      .zoom-instructions {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        
+        zoomableImages.forEach(img => {
+          img.addEventListener('click', function(e) {
+            if (this.classList.contains('zoomed')) {
+              // Zoom out
+              this.classList.remove('zoomed');
+              this.style.removeProperty('--x');
+              this.style.removeProperty('--y');
+            } else {
+              // Zoom in at click position
+              const rect = this.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100 + '%';
+              const y = ((e.clientY - rect.top) / rect.height) * 100 + '%';
+              
+              this.style.setProperty('--x', x);
+              this.style.setProperty('--y', y);
+              this.classList.add('zoomed');
+            }
+          });
+        });
+        
+        // Reset zoom on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const zoomedImages = document.querySelectorAll('.zoomed');
+            zoomedImages.forEach(img => {
+              img.classList.remove('zoomed');
+              img.style.removeProperty('--x');
+              img.style.removeProperty('--y');
+            });
+          }
+        });
+      });
+    </script>
+
 
 
   </div>
@@ -371,12 +509,83 @@
       </figcaption>
     </figure>
 
+    <style>
+      .zoomable-figure {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .zoomable-image {
+        cursor: zoom-in;
+        transition: transform 0.3s ease;
+      }
+      
+      .zoomed {
+        cursor: zoom-out;
+        transform: scale(2);
+        transform-origin: var(--x) var(--y);
+      }
+      
+      .zoom-instructions {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const zoomableImages = document.querySelectorAll('.zoomable-image');
+        
+        zoomableImages.forEach(img => {
+          img.addEventListener('click', function(e) {
+            if (this.classList.contains('zoomed')) {
+              // Zoom out
+              this.classList.remove('zoomed');
+              this.style.removeProperty('--x');
+              this.style.removeProperty('--y');
+            } else {
+              // Zoom in at click position
+              const rect = this.getBoundingClientRect();
+              const x = ((e.clientX - rect.left) / rect.width) * 100 + '%';
+              const y = ((e.clientY - rect.top) / rect.height) * 100 + '%';
+              
+              this.style.setProperty('--x', x);
+              this.style.setProperty('--y', y);
+              this.classList.add('zoomed');
+            }
+          });
+        });
+        
+        // Reset zoom on Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            const zoomedImages = document.querySelectorAll('.zoomed');
+            zoomedImages.forEach(img => {
+              img.classList.remove('zoomed');
+              img.style.removeProperty('--x');
+              img.style.removeProperty('--y');
+            });
+          }
+        });
+      });
+    </script>
+
     <figure class="image" style="margin-top: 20px;">
       <img src="static/images/perf_table.png" alt="Performance Table">
       <figcaption style="margin-top: 10px; text-align:center;">
         <strong>Table:</strong> Detailed comparison table of average throughput and latency.
       </figcaption>
     </figure>
+
+
 
     <br>
 
@@ -443,6 +652,7 @@
         While some redundant parameters are tolerable, maintaining manageable dimensionality is crucial. 
         Currently relying on domain expertise for parameter selection, future work could automate this process. 
         Techniques like checkpointing and configuration caching help reduce retraining costs as workloads change.
+        <br>
         <br>
         Despite its promise, <strong>LITune</strong> occasionally experiences convergence and stability challenges during training, 
         indicating areas for further research to enhance reliability. Accelerating offline training through methods 
